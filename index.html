@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título e Descrição -->
+  <title>Confira essas oportunidades imperdíveis – Crédito, Consórcio, Hospedagem e mais</title>
+  <meta name="description"
+    content="Explore oportunidades incríveis de consórcio, crédito pessoal, hospedagem e serviços digitais. Clique e saiba mais.">
+
+  <!-- Indexação e Rastreamento -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Seu Nome ou Empresa">
+  <meta name="keywords"
+    content="consórcio, crédito pessoal, hospedagem, site barato, consórcio de veículos, seguro auto, ganhar dinheiro online">
+
+  <!-- Open Graph (Facebook, LinkedIn, etc) -->
+  <meta property="og:title" content="Confira essas oportunidades imperdíveis">
+  <meta property="og:description" content="Clique e descubra opções de crédito, consórcio, hospedagem e muito mais.">
+  <meta property="og:type" content="website">
+
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Confira essas oportunidades imperdíveis">
+  <meta name="twitter:description" content="Consórcios, crédito pessoal e hospedagem com condições especiais.">
+  >
+
+  <!-- Favicon (opcional) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+    }
+
+    #promo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 420px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      padding: 15px;
+    }
+
+    .responsive-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 8px;
+      display: block;
+    }
+
+    #promoLink {
+      display: block;
+      margin-top: 12px;
+      padding: 10px;
+      background-color: #0056b3;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    #promoLink:hover {
+      background-color: #00449e;
+    }
+
+    #closeMessage {
+      text-align: center;
+      color: #555;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    #promoCloseBtn {
+      margin: 15px auto 0 auto;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      width: 100%;
+      padding: 10px;
+      cursor: not-allowed;
+    }
+
+    #promoCloseBtn.enabled {
+      cursor: pointer;
+    }
+
+    #promoCloseBtn span {
+      margin-left: 8px;
+    }
+
+    @media (max-width: 500px) {
+      #promo {
+        width: 100%;
+        border-radius: 0;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="promo" role="region" aria-label="Propaganda">
+    <iframe class="responsive-video" src="https://www.youtube.com/embed/pny3_4_jKo0?start=18"
+      title="YouTube Video Player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+    <!-- Link com texto e URL definidos dinamicamente ao carregar -->
+    <a id="promoLink" href="#" target="_blank">
+      CARREGANDO...
+    </a>
+
+    <div id="closeMessage">Em 10 segundos você pode fechar a propaganda</div>
+
+    <button id="promoCloseBtn" aria-label="Fechar propaganda" title="Fechar propaganda">
+      × <span>Fechar Propaganda</span>
+    </button>
+  </div>
+
+  <script>
+
+
+
+    const promoOptions = [
+      {url: "https://f06cadbf-2695-489d-b63f-99a5832d607a-00-mlr3g3ot3jjz.picard.replit.dev/", text: "Confira essa oportunidade"},
+      {url: "https://f06cadbf-2695-489d-b63f-99a5832d607a-00-mlr3g3ot3jjz.picard.replit.dev/", text: "vai perder essa oportunidade"},
+      {url: "https://filmeseserie.com.br/rede/social.html", text: "CONFIRA ESSES PERFIS INCRÍVEIS!"},
+      {url: "https://social-5rp.pages.dev/", text: "VEJA OS MELHORES PERFIS DO ESPÍRITO SANTO!"},
+      {url: "https://social-5rp.pages.dev/", text: "NÃO PERCA ESSES PERFIS FANTÁSTICOS!"},
+      {url: "https://espiritosanto-es.com.br/instagram/", text: "DESCUBRA PERFIS IMPERDÍVEIS AGORA!"},
+      {url: "https://espiritosanto-es.com.br/instagram/", text: "ACESSE E CONHEÇA PERFIS TOP!"},
+
+      {url: "https://espiritosanto-es.com.br/instagram/", text: "CONFIRA ESSES PERFIS "},
+
+      {url: "https://rservicobancario.pages.dev/", text: "DESCUBRA O MELHOR CONSÓRCIO PARA VOCÊ"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "ENTENDA COMO FUNCIONA O CONSÓRCIO SEM COMPLICAÇÃO"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "VEJA OPÇÕES DE CONSÓRCIO COM PARCELAS ACESSÍVEIS"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "CONQUISTE SEU OBJETIVO COM UM CONSÓRCIO PLANEJADO"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "FAÇA UM CONSÓRCIO COM SEGURANÇA E TRANSPARÊNCIA"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "SAIBA COMO INVESTIR EM CONSÓRCIO COM INTELIGÊNCIA"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "CONHEÇA TIPOS DE CONSÓRCIO E ESCOLHA O SEU"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "ENTENDA TUDO SOBRE CONSÓRCIO EM POUCOS MINUTOS"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "FAÇA UM BOM NEGÓCIO COM UM CONSÓRCIO CERTO"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "CONFIRA COMO O CONSÓRCIO PODE AJUDAR SEUS PLANOS"},
+
+      {url: "https://rservicobancario.pages.dev/", text: "CONFIRA VÁRIOS TIPOS DE CONSÓRCIO. SAIBA COMO FUNCIONA."},
+      {url: "https://guarapariform.pages.dev/", text: "Apartamento para temporada em guarapari"},
+      {url: "https://guarapariform.pages.dev/", text: "Confira este apartamento por temporada em Guarapari"},
+      {url: "https://guarapariform.pages.dev/", text: "Alugue seu apartamento de temporada em Guarapari aqui"},
+      {url: "https://guarapariform.pages.dev/", text: "Encontre hospedagem em Guarapari – clique para saber mais"},
+      {url: "https://guarapariform.pages.dev/", text: "Seu próximo apartamento de férias em Guarapari está aqui"},
+      {url: "https://guarapariform.pages.dev/", text: "Veja opções de aluguel por temporada em Guarapari"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "seguro empresarial completo"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "seguro viagem para sua tranquilidade"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "seguro saúde com cobertura ampla"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "consórcio para máquinas e equipamentos"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "consórcio para caminhões e frotas"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "consórcio para serviços e obras"},
+
+      {url: "https://uteis01.pages.dev/servicobancario", text: "seguro auto com preço justo"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "proteja seu lar com seguro residencial"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "seguro de vida para sua família"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "consórcio imobiliário sem burocracia"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "consórcio para seu carro novo"},
+      {url: "https://uteis01.pages.dev/servicobancario", text: "consórcio para motocicleta fácil"},
+
+      {url: "https://uteis01.pages.dev/servicobancario", text: "seu seguro de forma facilitada"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "confira essa oportunidade"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "não perca essa chance"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "acesse já e saiba mais"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "oportunidade imperdível"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "clique para aproveitar"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "promoção especial para você"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "acesse antes que acabe"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "garanta sua vaga agora"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "não fique de fora"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "confira os detalhes aqui"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "link exclusivo para você"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "acesse o conteúdo completo"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "oportunidade que você esperava"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "a hora é agora"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "não perca essa novidade"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "clique e confira"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "a oportunidade perfeita"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "garanta seu acesso"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "não deixe passar"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "confira essa chance agora"},
+      {url: "https://b2c7400d-9abc-40b5-907b-73cbcf3453fb-00-1bzoili2zd4n6.kirk.replit.dev/", text: "confira essa oportundiade"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "NOTICIAS DE VITÓRIA ES CONFIRA ESSAS NOVIDADES"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "CONFIRA AS ÚLTIMAS NOTÍCIAS DE VITÓRIA ES"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "NOVIDADES QUENTES DIRETO DE VITÓRIA ES"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "ACONTECEU AGORA EM VITÓRIA – VEJA AQUI"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "VEJA O QUE ESTÁ MOVIMENTANDO VITÓRIA ES"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "NOTÍCIAS ATUALIZADAS DE VITÓRIA ES"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "EXCLUSIVO: ÚLTIMAS DE VITÓRIA ES"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "FATOS URGENTES EM VITÓRIA – CLIQUE E CONFIRA"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "DIRETO DE VITÓRIA ES: ACONTECIMENTOS RECENTES"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "FIQUE POR DENTRO DAS NOVIDADES DE VITÓRIA"},
+      {url: "https://vitoriacloudflare01.pages.dev/", text: "VITÓRIA ES: VEJA AS PRINCIPAIS NOTÍCIAS DE HOJE"},
+
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Simule seu Seguro Auto de forma rápida e gratuita"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Consórcio de veículos com parcelas que cabem no bolso"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Seguro Residencial completo com assistência 24h"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Faça uma cotação personalizada para seu Seguro de Vida"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Planos de consórcio imobiliário com taxas reduzidas"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Proteja seu veículo com seguro auto sob medida"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Seguro para moto com cobertura completa e assistência"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Consórcio de imóveis sem juros e sem entrada"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Seguro empresarial para proteção do seu negócio"},
+      {url: "https://55ae4c7e.contatoroberto.pages.dev/", text: "Solicite agora sua simulação de seguro ou consórcio"},
+
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Hospedagem de sites com desconto exclusivo"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Criação de site profissional com Hostinger"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Hospedagem WordPress rápida e segura"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Desconto em hospedagem de sites com o código 1VICTOR444"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Serviços de hospedagem com melhor custo-benefício"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Construtor de sites grátis com planos Hostinger"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Hospede seu site com estabilidade e suporte 24h"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Planos de hospedagem a partir de R$ 6,99 por mês"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Domínio grátis incluso em planos selecionados"},
+      {url: "https://hostinger.com.br/?REFERRALCODE=1VICTOR444", text: "Ganhe bônus de indicação com o código 1VICTOR444"},
+
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Laudo bancário Laudo Pericial Bancário"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Análise de juros abusivos em contratos bancários"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Revisão contratual bancária com base em cálculos periciais"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Laudo técnico sobre financiamento com cobrança indevida"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Estudo pericial de encargos abusivos em contrato bancário"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Cálculo pericial do saldo devedor em empréstimo bancário"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Verificação de anatocismo em contrato de financiamento"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Laudo pericial bancário com base no Código de Defesa do Consumidor"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Apuração de saldo bancário com exclusão de encargos indevidos"},
+      {url: "https://victorxx.github.io/laudobancariogithub/", text: "Revisão de contrato de cartão de crédito com base pericial"},
+
+      {url: "https://central.dokehost.com.br/aff.php?aff=90", text: "Dokehost já conhece? confira uma VPS especial"},
+      {url: "https://central.dokehost.com.br/aff.php?aff=90", text: "Você conhece a Dokehost? confira as condições"},
+
+      {url: "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g", text: "O AIRBNB É UMA ÓTIMA FORMA DE VOCÊ GANHAR DINHEIRO COM SEU IMÓVEL!"},
+      {url: "https://wa.me/27999497001?text=Olá!%20Gostaria%20de%20falar%20com%20vocês.segurodecarro", text: "JÁ POSSUI UM SEGURO AUTO NÃO? TEMOS A SOLUÇÃO PARA VOCÊ"},
+      {url: "https://wa.me/27999497001?text=Olá!%20Gostaria%20de%20falar%20com%20vocês.segurodecarro", text: "SEGUROS E CONSÓRCIOS CONFIRA!"},
+      {url: "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g", text: "GANHE DINHEIRO COM SEU IMÓVEL"},
+
+      {url: "http://www.espiritosanto-es.com.br/cloudflare/3.html", text: "Confira essa oportunidade"},
+      {url: "http://www.espiritosanto-es.com.br/cloudflare/2.html", text: "Confira essa oportunidade"},
+      {url: "http://www.espiritosanto-es.com.br/cloudflare", text: "Confira essa oportunidade"},
+      {url: "https://remarkable-gelato-4db597.netlify.app/consorciopagina.html", text: "CONFIRA VÁRIOS TIPOS DE CONSÓRCIO. SAIBA COMO FUNCIONA. ESTAMOS À DISPOSIÇÃO!"},
+      {url: "https://geocredibnkvitoria.com/", text: "CRÉDITO PESSOAL DISPONÍVEL! FAÇA UMA SIMULAÇÃO GRATUITA."},
+      {url: "https://remarkable-gelato-4db597.netlify.app/redirecionadora.html", text: "CONFIRA ESSAS OPORTUNIDADES AGORA MESMO!"},
+      {url: "https://remarkable-gelato-4db597.netlify.app/", text: "CONFIRA ESSAS OPORTUNIDADES AGORA MESMO! → VPS MÁQUINA MELHOR PREÇO"},
+      {url: "https://www.espiritosanto-es.com.br/", text: "CONFIRA ESSE CONTEÚDO DE ALTA QUALIDADE"},
+      {url: "https://filmeseserie.com.br/empresa/", text: "CONFIRA ESSAS EMPRESAS AQUI"},
+      {url: "https://jogosantigos472302513.wordpress.com/", text: "TUDO SOBRE GAMES"},
+      {url: "https://brasilbrasileiross.blogspot.com/", text: "Portal do Brasil"},
+      {url: "https://oscriadoresmaisengracadoskdj.blogspot.com/", text: "Os criadores mais engraçados do YouTube"},
+      {url: "https://horavoo-git-main-victorsaibs-projects.vercel.app/", text: "Horário de voos descubra"},
+      {url: "https://bibliadonline.netlify.app/", text: "Versículos bíblicos confira"},
+      {url: "https://hostinger.com.br?REFERRALCODE=SSNVICTORXU8", text: "HOSPEDAGEM DE SITE BARATO CONFIRA"},
+      {url: "https://shrtfly.com/ref/xxvitaoxx", text: "Ganhe dinheiro compartilhando links"},
+      {url: "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g", text: "Comece no Airbnb hoje mesmo!"},
+      {url: "https://ocomerciobrasileironoticia.blogspot.com/", text: "ERP PARA EMPRESAS CONFIRA!"},
+      {url: "https://guaraparilinhadotempo.vercel.app/", text: "Linha do tempo Guarapari ES"},
+      {url: "https://linhadotempoguarapari.netlify.app/", text: "LINHA DO TEMPO GUARAPARI ES"},
+      {url: "https://vpserp.vercel.app/", text: "Soluções em ERP, VPS e Hospedagem"},
+      {url: "https://espiritosantolinhadotempovideo.vercel.app/", text: "CONFIRA ESSES VÍDEOS"},
+      {url: "https://vodkavilavelhavitoria.vercel.app/", text: "AS MELHORES VODKA DO MERCADO"},
+      {url: "https://creditopessoal.vercel.app/", text: "CRÉDITO PESSOAL SEGURO ENTRE OUTROS"},
+      {url: "https://ifoodreclama.vercel.app/", text: "IFOOD RECLAMAÇÃO"},
+      {url: "https://comidapodrealertaespiritosanto.vercel.app/", text: "COMIDA ESTRAGADA NO ES"},
+      {url: "https://esfogo.vercel.app/", text: "Notícias – Grande Vitória (últimos 60 dias)"},
+      {url: "https://drogasillinhadotempo.vercel.app/", text: "Notícias da RD Saúde (Drogasil)"},
+      {url: "https://congeladotimeline.vercel.app/", text: "Ofertas de arrepiar no frio de Vitória – ES"},
+      {url: "https://cavaleiroszodiacoj.netlify.app/", text: "Cavaleiros do Zodíaco"},
+      {url: "https://vendernainternet9.wordpress.com/vps-avancado/", text: "VPS"},
+      {url: "https://c6a856dd-1cfe-4b3f-bf6b-b4cb74c3a6a0-00-3jleqf3avboy2.picard.replit.dev/", text: "CONFERIR ESSA OPORTUNIDADE"},
+      {url: "https://dfe3f824-0009-4ce2-865e-52843b40570a-00-3mk7043azfns6.worf.replit.dev/", text: "CONFIRA ESSA OPORTUNIDADE DIVERSOS SERVIÇOS"}
+    ];
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const choice = promoOptions[Math.floor(Math.random() * promoOptions.length)];
+      const link = document.getElementById("promoLink");
+
+      // Define o link e o texto corretamente uma vez só
+      link.href = choice.url;
+      link.textContent = choice.text;
+
+      // Botão de fechar ativado após 10s
+      const closeMessage = document.getElementById("closeMessage");
+      const closeBtn = document.getElementById("promoCloseBtn");
+      let closeBtnEnabled = false;
+
+      setTimeout(() => {
+        closeMessage.textContent = "Agora você pode fechar a propaganda.";
+        closeBtn.style.display = "flex";
+        closeBtn.classList.add("enabled");
+        closeBtn.style.cursor = "pointer";
+        closeBtnEnabled = true;
+      }, 10000);
+
+      closeBtn.addEventListener("click", (e) => {
+        if (!closeBtnEnabled) {
+          e.preventDefault();
+          alert("Você só pode fechar a propaganda após 10 segundos.");
+          return false;
+        }
+        document.getElementById("promo").style.display = "none";
+      });
+    });
+  </script>
+
+</body>
+
+</html>
