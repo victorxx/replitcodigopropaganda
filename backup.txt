@@ -160,6 +160,7 @@ body {
 
 
     const promoOptions = [
+      {url:"https://novidadesportalwe.blogspot.com/2025/07/transforme-seu-espaco-em-renda-extra.html",text:"CONFIRA ESSA OPORTUNIDADE DE RENDA EXTRA"},
       {url: "https://central.dokehost.com.br/aff.php?aff=90", text: "Hospedagem VPS confiável? Veja a Dokehost!"},
       {url: "https://central.dokehost.com.br/aff.php?aff=90", text: "VPS com ótimo custo-benefício? Conheça a Dokehost"},
       {url: "https://central.dokehost.com.br/aff.php?aff=90", text: "Servidores rápidos e estáveis? Acesse a Dokehost"},
