@@ -31,87 +31,106 @@
   <!-- Favicon (opcional) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: black;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
 
-    #promo {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;
-      max-width: 420px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      z-index: 9999;
-      padding: 15px;
-    }
+#promo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  padding: 15px;
+}
 
-    .responsive-video {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: none;
-      border-radius: 8px;
-      display: block;
-    }
+.responsive-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
 
-    #promoLink {
-      display: block;
-      margin-top: 12px;
-      padding: 10px;
-      background-color: #0056b3;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
+#promoLink {
+  display: block;
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
-    #promoLink:hover {
-      background-color: #00449e;
-    }
+#promoLink:hover {
+  background-color: #00449e;
+}
 
-    #closeMessage {
-      text-align: center;
-      color: #555;
-      margin-top: 10px;
-      font-size: 14px;
-    }
+#closeMessage {
+  text-align: center;
+  color: #555;
+  margin-top: 10px;
+  font-size: 14px;
+}
 
-    #promoCloseBtn {
-      margin: 15px auto 0 auto;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      background-color: #e74c3c;
-      color: #fff;
-      border: none;
-      border-radius: 50px;
-      font-size: 16px;
-      width: 100%;
-      padding: 10px;
-      cursor: not-allowed;
-    }
+#promoCloseBtn {
+  margin: 15px auto 0 auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  cursor: not-allowed;
+}
 
-    #promoCloseBtn.enabled {
-      cursor: pointer;
-    }
+#promoCloseBtn.enabled {
+  cursor: pointer;
+}
 
-    #promoCloseBtn span {
-      margin-left: 8px;
-    }
+#promoCloseBtn span {
+  margin-left: 8px;
+}
 
-    @media (max-width: 500px) {
-      #promo {
-        width: 100%;
-        border-radius: 0;
-        left: 0;
-      }
-    }
+/* Responsivo para telas menores que 500px */
+@media (max-width: 500px) {
+  #promo {
+    width: 100%;
+    border-radius: 0;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+/* Ajustes para telas muito pequenas (ex: <360px) */
+@media (max-width: 360px) {
+  #promo {
+    padding: 10px;
+  }
+
+  #promoLink,
+  #promoCloseBtn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #closeMessage {
+    font-size: 13px;
+  }
+}
   </style>
 </head>
 
